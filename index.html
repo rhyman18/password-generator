@@ -16,11 +16,11 @@
             <h1>PASSWORD GENERATOR CUY UNIVERSITY</h1>
             <div class="d-flex flex-column gap-2">
                 <label for="passwordLength" class="text-uppercase fw-bold">Panjang Password :</label>
-                <input type="number" class="form-control form-control-lg" id="passwordLength">
+                <input type="number" min="6" max="32" value="10" class="form-control form-control-lg" id="passwordLength">
                 <label for="password" class="text-uppercase fw-bold">Password :</label>
-                <input type="password" class="form-control form-control-lg" id="password">
-                <button class="btn btn-dark text-uppercase fw-bold btn-lg mt-2">Generate Password</button>
-                <button class="btn btn-primary text-uppercase fw-bold btn-lg mt-2">Save Password</button>
+                <input type="text" class="form-control form-control-lg" id="password" disabled>
+                <button onclick="getPass()" class="btn btn-dark text-uppercase fw-bold btn-lg mt-2">Generate Password</button>
+                <a onclick="savePass()" id="download" class="btn btn-primary text-uppercase fw-bold btn-lg mt-2">Save Password</a>
             </div>
         </div>
     </div>
