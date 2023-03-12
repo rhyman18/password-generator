@@ -10,7 +10,7 @@ function generate(length) {
     const symbol = `~!@#$%^&*()_+{}|:"<>?-=[]\;',./`
     const data = lowerCase + upperCase + num + symbol
 
-    let generator = ''
+    let generator = null
     check = true
 
     for (let i = 0; i < length; i++) {
