@@ -8,7 +8,7 @@ function generate(length) {
     const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     const num = '0123456789'
     const symbol = `~!@#$%^&*()_+{}|:"<>?-=[]\;',./`
-    const data = lowerCase + upperCase + num + symbol
+    const data = lowerCase + upperCase + num
 
     let generator = null
     check = true
