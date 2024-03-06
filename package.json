@@ -1,0 +1,30 @@
+{
+  "name": "generate-keys-view",
+  "version": "1.0.0",
+  "description": "generate random string with interactive web view",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rhyman18/password-generator.git"
+  },
+  "keywords": [
+    "generate",
+    "password",
+    "tools",
+    "html",
+    "views"
+  ],
+  "author": "Ari Budiman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhyman18/password-generator/issues"
+  },
+  "homepage": "https://github.com/rhyman18/password-generator#readme",
+  "dependencies": {
+    "generate-keys": "^1.0.4"
+  }
+}

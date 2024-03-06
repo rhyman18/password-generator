@@ -16,18 +16,18 @@
             <h1>PASSWORD GENERATOR CUY UNIVERSITY</h1>
             <div class="d-flex flex-column gap-2">
                 <label for="passwordLength" class="text-uppercase fw-bold">Panjang Password :</label>
-                <input type="number" min="6" max="32" value="10" class="form-control form-control-lg" id="passwordLength">
+                <input type="number" min="5" max="100" value="10" class="form-control form-control-lg" id="passwordLength">
                 <label for="password" class="text-uppercase fw-bold">Password :</label>
                 <input type="text" class="form-control form-control-lg" id="password" disabled>
-                <button onclick="getPass()" class="btn btn-dark text-uppercase fw-bold btn-lg mt-2">Generate Password</button>
-                <a onclick="savePass()" id="download" class="btn btn-primary text-uppercase fw-bold btn-lg mt-2">Save Password</a>
+                <button id="generate" class="btn btn-dark text-uppercase fw-bold btn-lg mt-2">Generate Password</button>
+                <a id="download" class="btn btn-primary text-uppercase fw-bold btn-lg mt-2">Save Password</a>
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
 </body>
 
 </html>

@@ -1,31 +1,19 @@
+import { generateKeys } from './node_modules/generate-keys/index.js'
 const passwordLength = document.getElementById('passwordLength')
 const password = document.getElementById('password')
+const generate = document.getElementById('generate')
 const download = document.getElementById('download')
 let check = false
 
-function generate(length) {
-    const lowerCase = 'abcdefghijklmnopqrstuvwxyz'
-    const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    const num = '0123456789'
-    const symbol = `~!@#$%^&*()_+{}|:"<>?-=[]\;',./`
-    const data = lowerCase + upperCase + num + symbol
-
-    let generator = null
-    check = true
-
-    for (let i = 0; i < length; i++) {
-        generator += data[~~(Math.random() * data.length)]
-    }
-    return generator
-}
-
 function getPass() {
-    if (passwordLength.value >= 6 && passwordLength.value <= 32) {
-        const newPassword = generate(passwordLength.value)
+    const lengthValue = parseInt(passwordLength.value, 10)
+    if (!isNaN(lengthValue) && lengthValue >= 5 && lengthValue <= 100) {
+        const newPassword = generateKeys(lengthValue)
         password.value = newPassword
+        check = true
     } else {
-        passwordLength.value = 6
-        password.value = 'Password Min. 6 dan Max. 32'
+        passwordLength.value = 5
+        password.value = 'Password Min. 5 dan Max. 100'
     }
 }
 
@@ -38,3 +26,6 @@ function savePass() {
         password.value = 'Password Belum di Generate'
     }
 }
+
+generate.addEventListener('click', getPass)
+download.addEventListener('click', savePass)
