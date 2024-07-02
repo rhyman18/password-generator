@@ -2,10 +2,10 @@
   "name": "generate-keys-view",
   "version": "1.0.0",
   "description": "generate random string with interactive web view",
-  "main": "index.js",
+  "private": true,
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,10 @@
   },
   "homepage": "https://github.com/rhyman18/password-generator#readme",
   "dependencies": {
-    "generate-keys": "^1.0.4"
+    "generate-keys": "^1.0.6"
+  },
+  "devDependencies": {
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
   }
 }
