@@ -1,4 +1,4 @@
-import { generateKeys } from './node_modules/generate-keys/index.js'
+import { generateKeys } from "generate-keys"
 const passwordLength = document.getElementById('passwordLength')
 const password = document.getElementById('password')
 const generate = document.getElementById('generate')
